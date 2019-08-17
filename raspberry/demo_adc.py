@@ -62,10 +62,11 @@ if __name__ == "__main__":
   # board.set_adc_disable()
 
   while True:
-    val_list = board.get_adc_value(A0)   # A0 channels read
-    #val_list = board.get_adc_value(A1)   # A1 channels read
-    #val_list = board.get_adc_value(A2)   # A2 channels read
-    #val_list = board.get_adc_value(A3)   # A3 channels read
+    val_list = board.get_adc_value(board.A0)   # A0 channels read
+    val_list = board.get_adc_value(0)
+    #val_list = board.get_adc_value(board.A1)   # A1 channels read
+    #val_list = board.get_adc_value(board.A2)   # A2 channels read
+    #val_list = board.get_adc_value(board.A3)   # A3 channels read
     print("part channels read:")
     for val in val_list:
       print("channel: A0, value: %d" %val)

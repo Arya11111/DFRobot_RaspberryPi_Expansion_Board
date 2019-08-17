@@ -44,7 +44,7 @@ class DFRobot_Expansion_Board:
 
   _REG_DEF_PID = 0xdf
   _REG_DEF_VID = 0x10
-
+  
   ''' Enum board Analog channels '''
   A0 = 0x00
   A1 = 0x01
@@ -108,7 +108,7 @@ class DFRobot_Expansion_Board:
       id = id + 1
       ld.append(id)
     else:
-      ld = ld.append(i + 1 for i in id)
+      ld = [i + 1 for i in id]
     if ld == self.ALL:
       return range(1, limit + 1)
     for i in ld:
